@@ -14,14 +14,14 @@ from src.utils import save_object
 from dataclasses import dataclass
 
 @dataclass
-class DataTrasformationConfig:
+class DataTransformationConfig:
     preprocessor_obj_file_path = os.path.join('artifacts',"preprocessor.pkl")
 
-class DataTrasformation: 
+class DataTransformation: 
     def __init__(self):
-        self.data_trasformation_config = DataTrasformationConfig()
+        self.data_transformation_config = DataTransformationConfig()
 
-    def get_data_trasformer_object(self):
+    def get_data_transformer_object(self):
         '''
         This is the function that would be responsible for data transformation
         '''
@@ -77,7 +77,7 @@ class DataTrasformation:
             logging.info("Reading train & test data completed successfully")
             logging.info("Obtaining preprocessing objects")
 
-            preprocessing_obj = self.get_data_trasformer_object()
+            preprocessing_obj = self.get_data_transformer_object()
 
             target_columns_names = "math_score"
             numerical_columns = ["writing_score", "reading_score"]
@@ -105,7 +105,7 @@ class DataTrasformation:
 
             save_object (
 
-                file_path = self.data_trasformation_config.preprocessor_obj_file_path,
+                file_path = self.data_transformation_config.preprocessor_obj_file_path,
                 obj = preprocessing_obj 
 
             )
@@ -114,7 +114,7 @@ class DataTrasformation:
 
                 train_arr, 
                 test_arr, 
-                self.data_trasformation_config.preprocessor_obj_file_path
+                self.data_transformation_config.preprocessor_obj_file_path
 
             )
 

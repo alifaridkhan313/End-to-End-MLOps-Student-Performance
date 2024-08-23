@@ -21,7 +21,7 @@ def get_requirements(file_path:str)->List[str]:
 
 setup(
 
-name = 'End to End MLOps',
+name = 'End to End MLOps on Student performance dataset',
 version = '0.0.1',
 author = 'Ali Khan',
 author_email = 'alifaridkhan313@gmail.com',

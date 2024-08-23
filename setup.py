@@ -21,7 +21,7 @@ def get_requirements(file_path:str)->List[str]:
 
 setup(
 
-name = 'Machine Learning project 1',
+name = 'End to End MLOps',
 version = '0.0.1',
 author = 'Ali Khan',
 author_email = 'alifaridkhan313@gmail.com',
